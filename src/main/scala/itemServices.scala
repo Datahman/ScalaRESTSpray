@@ -5,26 +5,32 @@ import scala.concurrent.duration._
 
 class ItemServices(implicit val ec: ExecutionContext) {
 
-  var items = Vector.empty[Item]
-  var timeNow: Long = 0
-  var itemOffer: String = ""
-  var itemCreationTime: String = ""
+  var items = Vector.empty[Item]// Vector to hold offers
+  var timeNow: Long = 0// Server time
+  var itemOffer: String = ""// String representation of item type
+  var itemCreationTime: String = ""// Item timestamp
   var state: String = "" // Offer invalid -> off/ Offer valid -> on
-  var timeleftInminutes:Long=0
+  var timeleftInminutes:Long=0 
   var timeleftInseconds:Long=0
   var timeleftInhours:Long=0
 
-
+// POST 
   def createItem(item: Item): Future[Option[Int]] = Future {
     items.find(_.itemID == item.itemID) match {
-      case Some(t) => None // ID taken
-      case None =>
+      case Some(t) => None // If ID already present, make None
+      case None => // Case no match found 
         items = items :+ item
         Some(item.itemID)
     }
   }
 
-  def getAllItems(): Future[List[Item]] = Future {
+/* GET-List level
+* Besides retreieving objects, it also invokes the validation procedure for each item.
+* If validation method returns "off" => remove offer
+* If validation method returns "on" => keep offer and update time left on the offer by
+* invoking the updateItemOffer procedure
+*/
+   def getAllItems(): Future[List[Item]] = Future {
     for (i <- items) {
       validateItemOfferExpiry(getItemTimeProperties(i.itemID))
       if (state == "off") {
@@ -37,6 +43,7 @@ class ItemServices(implicit val ec: ExecutionContext) {
     items.toList
   }
 
+  // GET: Detail level
   def getItem(id: Int): Future[Option[Item]] = Future {
     if(items.count(item => item.itemID==id)>=1){
     items.find(_.itemID==id)}
@@ -44,25 +51,27 @@ class ItemServices(implicit val ec: ExecutionContext) {
         throw new NoSuchElementException
       }
   }
-
+  // DELETE 
 
   def deleteItem(id: Int): Future[Unit] = Future {
     if(items.count(item => item.itemID==id)>=1)
     {items = items.filterNot(_.itemID == id)}
     else {throw new NoSuchElementException}
   }
-
-  def updateItem(id: Int, update: ItemUpdate): Future[Option[Item]] = {
+  
+/*  PUT: Note: It updates most of the fields from the incoming request, but 
+ *  retrieves time left on the offer from the update procedure
+ */  
+   def updateItem(id: Int, update: ItemUpdate): Future[Option[Item]] = {
 
     def updateModel(item: Item): Item = {
       val itemName = update.itemName.getOrElse(item.itemName)
       val itemTimestamp = update.itemTimestamp.getOrElse(item.itemTimestamp)
       val itemPrice = update.itemPrice.getOrElse(item.itemPrice)
       val offerPeriod = update.offerPeriod.getOrElse(item.offerPeriod)
-      val offerTimeLeft = update.offerTimeLeft.getOrElse(item.offerTimeLeft) // get offer time left as defined by updateItemOffer method
+      val offerTimeLeft = item.offerTimeLeft // get offer time left as defined by updateItemOffer method
       Item(id, itemName, itemTimestamp, itemPrice, offerPeriod,offerTimeLeft)
     }
-
     getItem(id).flatMap({
       someItem =>
         someItem match {
@@ -79,7 +88,7 @@ class ItemServices(implicit val ec: ExecutionContext) {
   }
 
 
-
+  // Store time properties of each offer: offer creation timestamp and offer type string 
   def getItemTimeProperties(Itemid: Int): Array[(String, Long)] = {
     itemOffer = items.find(_.itemID == Itemid).get.offerPeriod
     itemCreationTime = items.find(_.itemID == Itemid).get.itemTimestamp
@@ -87,8 +96,8 @@ class ItemServices(implicit val ec: ExecutionContext) {
     val array = Array(itemTimeProps)
     array
   }
-
-
+  
+  // Validate offers, if valid calculate their remaining time left and pass on the string 'status'
   def validateItemOfferExpiry(timearray: Array[(String, Long)]) = {
     timeNow = System.currentTimeMillis() / 1000
     val pattern = """(\d+)([s]|[m]|h|d)""".r
@@ -128,7 +137,7 @@ class ItemServices(implicit val ec: ExecutionContext) {
 
   }
 
-
+  // Update the offertimeleft field
 
   def updateItemOffer(queryitem:Future[Option[Item]]):Unit =  {
     queryitem.foreach{queryitem =>
