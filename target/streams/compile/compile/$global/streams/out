@@ -1,0 +1,4 @@
+[0m[[0m[33mwarn[0m] [0m[0m/home/path2/Documents/FirstRESTSPRAY/src/main/scala/itemServices.scala:23:9: a pure expression does nothing in statement position; you may be omitting necessary parentheses[0m
+[0m[[0m[33mwarn[0m] [0m[0m        items[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
