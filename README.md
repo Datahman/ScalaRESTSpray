@@ -17,6 +17,7 @@ Project: Aim is to produce an API which enables user to view and manipulate offe
 
 * Implement restriction on the PUT procedure
 * Implement (somehow) an extra description of the offer at a detail level
+* Consider refactorisation on time based properties
 
 
 ## API Endpoints
