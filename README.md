@@ -23,3 +23,16 @@ Project: Aim is to produce an API which enables user to view and manipulate offe
 ## API Endpoints
 * **/items - Detail view
 * **/items/ID -List view
+
+## JSON requests
+
+Using POSTMAN plugin:
+
+{
+	"itemID":1,
+	"itemName":"item1",
+	"itemTimestamp":"{{$timestamp}}",
+	"itemPrice":4.65,
+	"offerPeriod":"4m",
+	"offerTimeLeft":"NA"
+}
