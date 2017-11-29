@@ -174,12 +174,22 @@ class ItemServices(implicit val ec: ExecutionContext) {
     }
   }
 
+  def backgroundValidation():Unit={
+    for(item <- items){
+      validateItemOfferExpiry(getItemTimeProperties(item.itemID))
+      if(state=="on"){
+        updateItemOffer(getItem(item.itemID))
+      }
+      if (state=="off") {
+        deleteItem(item.itemID)}
+    }
+
+  }
+
 }
 
-/* ITEMNAME DOES NOT REMAIN IN SCOPE AFTER SUCCESS
-    if(timeNow!=0 && itemtobeValidated.isInstanceOf[Future[Option[Item]]]) {
-      itemtobeValidated.onComplete {
-        case Success(item) => itemName = item.get.itemName
-        case Failure(e) => e.printStackTrace
-      }
-    }*/
+
+
+
+
+

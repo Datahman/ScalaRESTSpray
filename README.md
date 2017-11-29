@@ -14,7 +14,8 @@ Project: Aim is to produce an API which enables user to view and manipulate offe
 * Update (PUT) any field of the object  
 
 ## Future to dos:
-
+* Implement CRON job side effect free. Done. 
+* Remove the need of having timestamp on objects, and associated need on items. Contain item creation time on a hash MAP ?
 * Implement restriction on the PUT procedure
 * Implement (somehow) an extra description of the offer at a detail level
 * Consider refactorisation on time based properties

@@ -4,8 +4,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemServices$$anonfun$getItem$1$$anonfun$apply$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$validateItemOfferExpiry$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemServices$$anonfun$validateItemOfferExpiry$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$6.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemServices$$anonfun$6.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ItemServices.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemServices.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	customHeaderService$$anonfun$locationHeader$3$$anonfun$apply$3$$anonfun$apply$4.class[0m
@@ -14,6 +12,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemServices$$anonfun$createItem$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ItemResource$$anonfun$itemRoutes$3$$anonfun$apply$2$$anonfun$apply$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemResource$$anonfun$itemRoutes$3$$anonfun$apply$2$$anonfun$apply$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	JsonSupport$$anon$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/JsonSupport$$anon$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$getAllItems$1$$anonfun$apply$1.class[0m
@@ -24,6 +24,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemUpdate.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$updateItemOffer$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemServices$$anonfun$updateItemOffer$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ItemResource$$anonfun$itemRoutes$3$$anonfun$apply$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemResource$$anonfun$itemRoutes$3$$anonfun$apply$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$createItem$1$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemServices$$anonfun$createItem$1$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$getAllItems$1.class[0m
@@ -54,6 +56,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/customHeaderService$$anonfun$locationHeader$2$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemServices$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$backgroundValidation$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemServices$$anonfun$backgroundValidation$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Item.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/Item.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$updateItemOffer$1$$anonfun$apply$12$$anonfun$apply$14.class[0m
@@ -64,12 +68,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemUpdate$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$updateItemOffer$1$$anonfun$apply$8$$anonfun$apply$10.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemServices$$anonfun$updateItemOffer$1$$anonfun$apply$8$$anonfun$apply$10.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ItemResource$$anonfun$itemRoutes$3$$anonfun$apply$3.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemResource$$anonfun$itemRoutes$3$$anonfun$apply$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$updateItemOffer$1$$anonfun$apply$8$$anonfun$apply$9.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemServices$$anonfun$updateItemOffer$1$$anonfun$apply$8$$anonfun$apply$9.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ItemResource$$anonfun$itemRoutes$3$$anonfun$apply$5.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemResource$$anonfun$itemRoutes$3$$anonfun$apply$5.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$getItem$1$$anonfun$apply$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemServices$$anonfun$getItem$1$$anonfun$apply$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$getItemTimeProperties$1.class[0m
@@ -92,8 +92,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemServices$$anonfun$getItemTimeProperties$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	customHeaderService$$anonfun$locationHeader$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/customHeaderService$$anonfun$locationHeader$2.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ItemResource$$anonfun$itemRoutes$3$$anonfun$apply$3$$anonfun$apply$4.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/ItemResource$$anonfun$itemRoutes$3$$anonfun$apply$3$$anonfun$apply$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	RestInterface.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/path2/Documents/ScalaRESTSpray/target/scala-2.11/classes/RestInterface.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ItemServices$$anonfun$deleteItem$1$$anonfun$apply$mcV$sp$1.class[0m

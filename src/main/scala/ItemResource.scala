@@ -20,16 +20,7 @@ trait ItemResource extends  customHeaderService  {
     path(Segment) {
       id =>
         get {
-          itemService.validateItemOfferExpiry(itemService.getItemTimeProperties(id.toInt))
-          if(itemService.state=="on"){
-            itemService.updateItemOffer(itemService.getItem(id.toInt))
-            complete(itemService.getItem(id.toInt))
-          }
-          else if (itemService.state=="off") {
-            itemService.deleteItem(id.toInt)
-            redirectHttp("/items")
-          }
-          else {complete("Invalid offer state!")}
+          complete(itemService.getItem(id.toInt))
         } ~
         put {
           entity(as[ItemUpdate]) {
